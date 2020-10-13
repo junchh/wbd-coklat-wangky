@@ -1,4 +1,5 @@
 <?php 
+header('Content-Type: application/json');
 
 define("HOST", 'localhost');
 define("USER", 'root');
