@@ -14,7 +14,7 @@
         <div class="register-box__header">
           <h1>Willy Wangky Choco Factory</h1>
         </div>
-        <form class="register-box__form my-2">
+        <form class="register-box__form my-2" onsubmit="postForm(event)">
           <input
             class="register-box__form__input my-2 p-2"
             type="text"
@@ -37,11 +37,13 @@
             class="register-box__form__input my-2 p-2"
             type="password"
             name="password"
+            id="password"
             placeholder="Password"
           />
           <input
             class="register-box__form__input my-2 p-2"
             type="password"
+            id="rePassword"
             placeholder="Retype Password"
           />
           <button class="register-box__form__button mt-2 p-2" type="submit">
@@ -50,5 +52,7 @@
         </form>
       </div>
     </div>
+    <script src="script/verifyPassword.js"></script>
+    <script src="script/postForm.js"></script>
   </body>
 </html>
