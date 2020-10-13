@@ -21,14 +21,14 @@ if(isset($_POST['username'])) {
     $query_result = $query->get_result();
     
     if($query_result->num_rows != 1) {
-        $result = ["status" => "auth_failed", "description" => "no such user!."];
+        $result = ["status" => "auth_failed_nouser", "description" => "no such user!."];
         exit(json_encode($result));
     }
 
     $userData = $query_result->fetch_assoc();
 
     if(!password_verify($password, $userData['password'])) {
-        $result = ["status" => "auth_failed", "description" => "invalid password!."];
+        $result = ["status" => "auth_failed_pass", "description" => "invalid password!."];
         exit(json_encode($result));
     }
 
