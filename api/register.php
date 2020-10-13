@@ -19,7 +19,7 @@ if(isset($_POST['username'])) {
     }
 
     $query_result = $query->get_result();
-    
+
     if($query_result->num_rows > 0) {
         $result = ["status" => "duplicate", "description" => "Username or Email already exist!"];
         exit(json_encode($result));
@@ -53,7 +53,7 @@ if(isset($_POST['username'])) {
         exit(json_encode($result));
     }
 
-    $payload = ["token" => $hash, "expire" => $expire];
+    $payload = ["token" => $hash];
     $result = ["status" => "success", "description" => "user successfully registered", "payload" => $payload];
     echo json_encode($result); 
 
