@@ -5,15 +5,20 @@ require_once 'config.php';
 if(isset($_POST['username'])) {
 
     
-    $query = $con->prepare("INSERT INTO `users` (username, password, email, superuser) VALUES (?, ?, ?, ?)");
+    $query = $con->prepare("INSERT INTO `users` (username, name, password, email, superuser) VALUES (?, ?, ?, ?, ?)");
     
-    $query->bind_param("sssi", $username, $password, $email, $super_user);
+    $query->bind_param("ssssi", $username, $name, $password, $email, $super_user);
     
     $username = $_POST['username'];
+    $name = $_POST['name'];
     $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
     $email = $_POST['email'];
     $super_user = 0;
-    $query->execute();
+
+    if(!$query->execute()){
+        $result = ["status" => "error", "description" => $con->error];
+        exit(json_encode($result));
+    }
 
     $user_id = $query->insert_id;
 
@@ -27,15 +32,15 @@ if(isset($_POST['username'])) {
 
     $hash = md5(time() . $user_id . $username);
 
-    if($con->query("INSERT INTO `sessions` (session_id, user_id, expire_date) VALUES ('" . $hash . "', '" . $user_id . "', '" . $expire_date  . "')")) {
+    if(!$con->query("INSERT INTO `sessions` (session_id, user_id, expire_date) VALUES ('" . $hash . "', '" . $user_id . "', '" . $expire_date  . "')")) {
 
-        $payload = ["token" => $hash, "expire" => $expire];
-        $result = ["status" => "success", "description" => "user successfully registered", "payload" => $payload];
-        echo json_encode($result);
-    } else {
         $result = ["status" => "error", "description" => $con->error];
         exit(json_encode($result));
     }
+
+    $payload = ["token" => $hash, "expire" => $expire];
+    $result = ["status" => "success", "description" => "user successfully registered", "payload" => $payload];
+    echo json_encode($result); 
 
     
 
