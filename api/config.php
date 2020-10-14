@@ -14,4 +14,8 @@ if($con->connect_errno) {
     exit(json_encode($result));
 }
 
+function isLoggedin() {
+    
+}
+
 
