@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/common.css" />
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/navigation.css" />
+    <link rel="stylesheet" href="styles/dashboard.css" />
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <nav class="navigation">
+      <div class="navigation__linkcontainer">
+        <a class="navigation__link" href="#" onclick="console.log('Home')"">Home</a>
+        <a class="navigation__link" href="#" onclick="console.log('History')"">History</a>
+      </div>
+      <div class="navigation__searchcontainer">
+        <form class="navigation__searchcontainer__form">
+          <input class="navigation__search" type="text" name="" value="" placeholder="Search" />
+        </form>
+      </div>
+      <div class="navigation__logoutcontainer">
+        <a class="navigation__link" href="#" onclick="console.log('Logout')">Logout</a>
+      </div>
+    </nav>
+    <div class="dashboard container-fluid p-6">
+      <div class="dashboard__lore">
+        <h2 id="motd">Hello, Wangky!</h2>
+        <div><a href="#">
+          View all chocolates
+        </a>
+        </div>
+      </div>
+      <div class="dashboard__itemcontainer" id="dashboard__itemcontainer"></div>
+      </div>
+    </div>
+  </body>
+  <script src="./script/generateDashboardItem.js"></script>
+  <script>generateDashboardItem([
+    {
+      id:1, name:'Cadbury Vanilla', price:123456, imagePath:'static/images/chocolate.jpg', quantitySold: 123, currentQuantity:234
+    },
+    {
+      id:2, name:'Cadbury Vanilla', price:123456, imagePath:'static/images/chocolate.jpg', quantitySold: 123, currentQuantity:234
+    },
+    {
+      id:3, name:'Cadbury Vanilla', price:123456, imagePath:'static/images/chocolate.jpg', quantitySold: 123, currentQuantity:234
+    },
+    {
+      id:3, name:'Cadbury Vanilla', price:123456, imagePath:'static/images/chocolate.jpg', quantitySold: 123, currentQuantity:234
+    },
+    {
+      id:3, name:'Cadbury Vanilla', price:123456, imagePath:'static/images/chocolate.jpg', quantitySold: 123, currentQuantity:234
+    },
+    {
+      id:3, name:'Cadbury Vanilla', price:123456, imagePath:'static/images/chocolate.jpg', quantitySold: 123, currentQuantity:234
+    },
+    {
+      id:3, name:'Cadbury Vanilla', price:123456, imagePath:'static/images/chocolate.jpg', quantitySold: 123, currentQuantity:234
+    },
+  ]);</script>
+</html>

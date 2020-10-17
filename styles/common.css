@@ -15,14 +15,14 @@ h6 {
 }
 
 .container-fluid {
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
 }
 
 /* sm */
 @media only screen and (max-width: 800px) {
   .container {
-    width: 100vw;
+    width: 100%;
     min-height: 100vh;
     margin-left: auto;
     margin-right: auto;

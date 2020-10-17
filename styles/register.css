@@ -10,12 +10,13 @@ body {
   justify-content: center;
   border-radius: 5px;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-  width: 40%;
+  min-width: 40%;
   min-height: 450px;
 }
 
 .register-box__header {
   display: flex;
+  flex-direction: column;
   align-items: center;
   height: 100%;
   flex: 1;
@@ -46,4 +47,13 @@ body {
   background-color: lightseagreen;
   border: 0;
   color: white;
+}
+
+.register-box__lore {
+  color: #aaa;
+}
+
+.register-box__lore > a,
+a:visited {
+  color: lightseagreen;
 }
