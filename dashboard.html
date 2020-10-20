@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="styles/dashboard.css" />
     <title>Dashboard</title>
   </head>
-  <body>
+  <body onload="checkCookie()">
     <nav class="navigation">
       <div class="navigation__linkcontainer">
         <a class="navigation__link" href="#" onclick="console.log('Home')"">Home</a>
@@ -35,6 +35,7 @@
       <div class="dashboard__itemcontainer" id="dashboard__itemcontainer"></div>
       </div>
     </div>
+    <script src="script/checkCookie.js"></script>
   </body>
   <script src="./script/generateDashboardItem.js"></script>
   <script>generateDashboardItem([
