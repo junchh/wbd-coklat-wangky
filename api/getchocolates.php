@@ -15,4 +15,5 @@ while($row = $query->fetch_assoc()) {
     array_push($payload, transformRow($row));
 }
 
-echo json_encode($payload);
+$result = ["status" => "success", "description" => "retrieved all chocolates", "payload" => $payload];
+echo json_encode($result); 
