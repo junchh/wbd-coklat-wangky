@@ -22,7 +22,6 @@ const clearCookie = () => {
 
 const checkCookie = () => {
   const session_id = getCookie("session_id");
-  const expires = getCookie("expires");
   if (session_id === null)   {
     window.location = '/login.html';
   }
