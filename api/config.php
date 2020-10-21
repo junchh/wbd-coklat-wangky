@@ -14,7 +14,7 @@ if($con->connect_errno) {
     exit(json_encode($result));
 }
 
-function isLoggedin() {
+function isLoggedin($con) {
     $headers = getallheaders();
     $token = $headers['sessiontoken'];
 
@@ -49,4 +49,24 @@ function isLoggedin() {
 
 }
 
+function changeToCamel($string) {
+    $res = "";
+    $arr = explode("_", $string);
+    for($i = 0; $i < count($arr); $i++) {
+        if($i == 0) {
+            $res .= $arr[$i];
+        } else {
+            $res .= ucfirst($arr[$i]);
+        }
+    }
+    return $res;
+}
+
+function transformRow($arr) {
+    $res = [];
+    foreach($arr as $key => $value) {
+        $res[changeToCamel($key)] = $value;
+    }
+    return $res;
+}
 
