@@ -1,0 +1,32 @@
+.detail {
+}
+
+.detail__header {
+}
+
+.detail__header > h1 {
+  font-size: 2rem;
+}
+
+.detail__content {
+  display: flex;
+  flex-direction: row;
+}
+
+.detail__content__imagecontainer {
+  flex: 1;
+  padding: 0.5rem;
+}
+.detail__content__imagecontainer > img {
+  width: 300px;
+  height: 300px;
+}
+
+.detail__content__info {
+  flex: 2;
+  padding: 0.5rem;
+}
+
+.detail__content__info__text {
+  padding-bottom: 0.5rem;
+}

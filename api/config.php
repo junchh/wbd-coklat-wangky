@@ -3,7 +3,7 @@ header('Content-Type: application/json');
 
 define("HOST", 'localhost');
 define("USER", 'root');
-define('PASS', '123');
+define('PASS', 'password');
 define('DBNAME', 'choco_factory');
 
 $con = new mysqli(HOST, USER, PASS, DBNAME);
