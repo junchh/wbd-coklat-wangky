@@ -1,9 +1,9 @@
 const callback = (data) => {
   const result = JSON.parse(data);
-  console.log(result["status"] + "\n" + result["description"]);
-  if(result.hasOwnProperty('payload')){
+  if(result.hasOwnProperty('status') && result["status"] === "success"){
     const session_id = result['payload']['token'];
-    document.cookie = `session_id=${session_id}`;
+    clearCookie();
+    setCookie(session_id, 3600);
     window.location = '/dashboard.html';
   }
 }

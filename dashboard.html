@@ -21,7 +21,7 @@
         </form>
       </div>
       <div class="navigation__logoutcontainer">
-        <a class="navigation__link" href="#" onclick="console.log('Logout')">Logout</a>
+        <a class="navigation__link" href="#" onclick="logout()">Logout</a>
       </div>
     </nav>
     <div class="dashboard container-fluid p-6">
@@ -35,7 +35,8 @@
       <div class="dashboard__itemcontainer" id="dashboard__itemcontainer"></div>
       </div>
     </div>
-    <script src="script/checkCookie.js"></script>
+    <script src="script/cookieHandler.js"></script>
+    <script src="script/logout.js"></script>
   </body>
   <script src="./script/generateDashboardItem.js"></script>
   <script>generateDashboardItem([
