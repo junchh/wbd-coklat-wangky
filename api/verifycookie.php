@@ -38,8 +38,7 @@ if(isset($_GET['sessiontoken'])) {
         exit(json_encode($result));
     }
 
-    $payload = ["username" => $session_data['username']];
-    $result = ["status" => "success", "description" => "login valid.", "payload" => $payload];
+    $result = ["status" => "success", "description" => "login valid."];
     echo json_encode($result); 
 
     
