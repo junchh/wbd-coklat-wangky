@@ -22,13 +22,13 @@ function isLoggedin() {
     $query->bind_param("s", $token);
 
     if(!$query->execute()){
-        return false;
+        return -1;
     }
 
     $query_result = $query->get_result();
 
     if($query_result->num_rows == 0) {
-        return false;
+        return -1;
     }
 
     $session_data = $query_result->fetch_assoc();
@@ -38,14 +38,14 @@ function isLoggedin() {
     
 
     if(!$query->execute()){
-        return false;
+        return -1;
     }
 
     if($now > $expired) {
-        return false;
+        return -1;
     }
-
-    return true;
+    
+    return $session_data['user_id']; 
 
 }
 
