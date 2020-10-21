@@ -4,7 +4,8 @@ require_once 'config.php';
 
 if(isset($_GET['sessiontoken'])) {
 
-    $token = $_GET['sessiontoken'];
+    $headers = getallheaders();
+    $token = $headers['sessiontoken'];
 
     $query = $con->prepare("SELECT * FROM `sessions` WHERE `session_id` = ?");
     $query->bind_param("s", $token);
@@ -37,8 +38,8 @@ if(isset($_GET['sessiontoken'])) {
         exit(json_encode($result));
     }
 
-    $payload = ["user_id" => $session_data['user_id']];
-    $result = ["status" => "success", "description" => "user successfully registered", "payload" => $payload];
+    $payload = ["username" => $session_data['username']];
+    $result = ["status" => "success", "description" => "login valid.", "payload" => $payload];
     echo json_encode($result); 
 
     
