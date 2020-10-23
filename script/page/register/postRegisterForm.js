@@ -12,7 +12,7 @@ const postRegisterForm = (event) => {
   event.preventDefault();
   if (verifyPassword()) {
     const formData = new FormData(event.target);
-    postAPI("/api/register.php", callback, formData);
+    postAPI("/api/auth/register.php", callback, formData);
   }
   return;
 };

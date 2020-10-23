@@ -1,6 +1,6 @@
-.dahsboard {
+.dashboard {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
 }
 
 .dashboard__lore {
@@ -9,8 +9,10 @@
   justify-content: space-between;
 }
 
-.dashboard__lore > h2 {
+.dashboard__lore > h2,
+.dashboard__lore span {
   font-size: 1.5rem;
+  font-family: "Playfair Display";
 }
 
 .dashboard__itemcontainer {

@@ -4,4 +4,4 @@ const callback = (data) => {
 };
 
 checkCookie();
-getAPI("/api/getchocolates.php", callback);
+getAPI("/api/chocolate/getchocolates.php", callback);

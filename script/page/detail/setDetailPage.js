@@ -1,5 +1,5 @@
 const setDetailPage = (chocoId) => {
-  getAPI(`/api/getchocolate.php?id=${chocoId}`, (data) => {
+  getAPI(`/api/chocolate/getchocolate.php?id=${chocoId}`, (data) => {
     const jsonData = JSON.parse(data);
     console.log(jsonData);
 

@@ -11,6 +11,6 @@ const callback = (data) => {
 const postLoginForm = (event) => {
   event.preventDefault();
   const formData = new FormData(event.target);
-  postAPI("/api/login.php", callback, formData);
+  postAPI("/api/auth/login.php", callback, formData);
   return;
 };
