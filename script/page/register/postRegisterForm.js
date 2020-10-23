@@ -1,12 +1,12 @@
 const callback = (data) => {
   const result = JSON.parse(data);
-  if(result.hasOwnProperty('status') && result["status"] === "success"){
-    const session_id = result['payload']['token'];
+  if (result.hasOwnProperty("status") && result["status"] === "success") {
+    const session_id = result["payload"]["token"];
     clearCookie();
     setCookie(session_id, 3600);
-    window.location = '/dashboard.html';
+    window.location = "/";
   }
-}
+};
 
 const postRegisterForm = (event) => {
   event.preventDefault();
