@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles/normalize.css" />
     <link rel="stylesheet" href="styles/navigation.css" />
     <link rel="stylesheet" href="styles/dashboard.css" />
-    <title>Dashboard</title>
+    <title>Search kuy</title>
   </head>
   <body onload="checkCookie()">
     <nav class="navigation">
@@ -17,7 +17,7 @@
       </div>
       <div class="navigation__searchcontainer">
         <form method="GET" action="search.html" class="navigation__searchcontainer__form">
-          <input class="navigation__search" type="text" name="q" value="" placeholder="Search" />
+          <input id="search-query" class="navigation__search" type="text" name="q" value="" placeholder="Search" />
         </form>
       </div>
       <div class="navigation__logoutcontainer">
@@ -38,8 +38,7 @@
     <script src="./script/auth/cookieHandler.js"></script>
     <script src="./script/auth/logout.js"></script>
     <script src="./script/helpers/fetcher.js"></script>
-    <script src="./script/page/dashboard/generateDashboardItem.js"></script>
-    <script src="./script/page/dashboard/getDashboardItem.js"></script>
+    <script src="./script/page/search/search.js"></script>
   </body>
   <!-- <script>generateDashboardItem([
     {
