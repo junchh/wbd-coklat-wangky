@@ -32,3 +32,25 @@
 .search-item-description > h2 {
   margin-bottom: 0.3rem;
 }
+
+.search-pagination {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.search-nav {
+  list-style: none;
+  display: flex;
+  padding: 1rem;
+}
+
+.pagination-item {
+  cursor: pointer;
+  padding: 0 0.5rem 0 0.5rem;
+  color: rgb(94, 38, 146);
+}
+
+.active {
+  color: rgb(217, 214, 219);
+}
