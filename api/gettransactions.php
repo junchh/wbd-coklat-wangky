@@ -15,5 +15,5 @@ while($row = $query->fetch_assoc()) {
     array_push($payload, transformRow($row));
 }
 
-$result = ["status" => "success", "description" => "retrieved all transactions", "payload" => $payload];
+$result = ["status" => "success", "description" => "retrieved all transactions for current user", "payload" => $payload];
 echo json_encode($result); 
