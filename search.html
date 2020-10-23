@@ -7,9 +7,10 @@
     <link rel="stylesheet" href="styles/normalize.css" />
     <link rel="stylesheet" href="styles/navigation.css" />
     <link rel="stylesheet" href="styles/dashboard.css" />
-    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles/search.css" />
+    <title>Search kuy</title>
   </head>
-  <body>
+  <body onload="checkCookie()">
     <nav class="navigation">
       <div class="navigation__linkcontainer">
         <a class="navigation__link" href="#" onclick="console.log('Home')"">Home</a>
@@ -17,7 +18,7 @@
       </div>
       <div class="navigation__searchcontainer">
         <form method="GET" action="search.html" class="navigation__searchcontainer__form">
-          <input class="navigation__search" type="text" name="q" value="" placeholder="Search" />
+          <input id="search-query" class="navigation__search" type="text" name="q" value="" placeholder="Search" />
         </form>
       </div>
       <div class="navigation__logoutcontainer">
@@ -26,22 +27,25 @@
     </nav>
     <div class="dashboard container-fluid p-6">
       <div class="dashboard__lore">
-        <h2>Hello, <span id="username"></span>!</h2>
-        <div><a href="#">
-          View all chocolates
-        </a>
-        </div>
+        <h2 id="motd">Hello, Wangky!</h2>
       </div>
-      <div class="dashboard__itemcontainer" id="dashboard__itemcontainer"></div>
+      <div id="search-result-container" class="search-result">
+        
+        
+      </div>
+      <div class="search-pagination">
+        <ul id="search-nav" class="search-nav">
+            <li class="pagination-item active">1</li>
+            <li class="pagination-item">2</li>
+            <li class="pagination-item">3</li>
+            <li class="pagination-item">4</li>
+        </ul>
       </div>
     </div>
     <script src="./script/auth/cookieHandler.js"></script>
     <script src="./script/auth/logout.js"></script>
     <script src="./script/helpers/fetcher.js"></script>
-    <script src="./script/auth/checkCookie.js"></script>
-    <script src="./script/page/dashboard/generateDashboardItem.js"></script>
-    <script src="./script/page/dashboard/getDashboardItem.js"></script>
-    <script src="./script/page/dashboard/getUsername.js"></script>
+    <script src="./script/page/search/search.js"></script>
   </body>
   <!-- <script>generateDashboardItem([
     {
