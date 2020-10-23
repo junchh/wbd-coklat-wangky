@@ -2,9 +2,10 @@
 
 require_once 'config.php';
 
-if(isset($_GET['sessiontoken'])) {
+$headers = getallheaders();
 
-    $headers = getallheaders();
+if(isset($headers['sessiontoken'])) {
+
     $token = $headers['sessiontoken'];
 
     $query = $con->prepare("SELECT * FROM `sessions` WHERE `session_id` = ?");
