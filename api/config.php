@@ -19,6 +19,11 @@ if($con->connect_errno) {
 function isLoggedin($con) {
     // Get token from header
     $headers = getallheaders();
+
+    if(!isset($headers['sessiontoken'])){
+        return -1;
+    }
+    
     $token = $headers['sessiontoken'];
 
     // Validate session with DB

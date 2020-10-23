@@ -19,13 +19,3 @@ const clearCookie = () => {
   const expiredDate = "Thu, 01 Jan 1970 00:00:00 GMT";
   document.cookie = `session_id=;expires=${expiredDate};path=/`
 }
-
-const checkCookie = () => {
-  const session_id = getCookie("session_id");
-  if (session_id === null)   {
-    window.location = '/login.html';
-  }
-  else {
-  	// TODO: check cookie to session
-  }
-}
