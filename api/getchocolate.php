@@ -29,7 +29,7 @@ if(isset($_GET['id'])) {
         exit(json_encode($result));
     }
 
-    $payload = $query_result->fetch_assoc();
+    $payload = transformRow($query_result->fetch_assoc());
 
     $result = ["status" => "success", "description" => "retrieved chocolate.", "payload" => $payload];
     echo json_encode($result); 

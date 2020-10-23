@@ -3,11 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Choco Detail</title>
+    <title>Buy</title>
     <link rel="stylesheet" href="styles/common.css" />
     <link rel="stylesheet" href="styles/normalize.css" />
     <link rel="stylesheet" href="styles/navigation.css" />
-    <link rel="stylesheet" href="styles/detail.css" />
+    <link rel="stylesheet" href="styles/buy.css" />
   </head>
   <body>
     <nav class="navigation">
@@ -37,27 +37,27 @@
       </div>
     </nav>
     <div class="container-fluid p-6">
-      <div class="detail" id="detail-container">
-        <div class="detail__header">
+      <div class="buy" id="buy-container">
+        <div class="buy__header">
           <h1 id="chocolate-name"></h1>
         </div>
-        <div class="detail__content">
-          <div class="detail__content__imagecontainer">
+        <div class="buy__content">
+          <div class="buy__content__imagecontainer">
             <img src="./" id="chocolate-image" />
           </div>
-          <div class="detail__content__info">
-            <div class="detail__content__info__text">
+          <div class="buy__content__info">
+            <div class="buy__content__info__text">
               Amount sold: <span id="chocolate-quantity-sold"></span>
             </div>
-            <div class="detail__content__info__text">
+            <div class="buy__content__info__text">
               Price: Rp <span id="chocolate-price"></span>
             </div>
-            <div class="detail__content__info__text">
+            <div class="buy__content__info__text">
               Amount available: <span id="chocolate-current-quantity"></span>
             </div>
-            <div class="detail__content__info__text">Description</div>
+            <div class="buy__content__info__text">Description</div>
             <div
-              class="detail__content__info__description"
+              class="buy__content__info__description"
               id="chocolate-description"
             >
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum
@@ -66,15 +66,15 @@
             </div>
           </div>
         </div>
-        <div class="detail__buttoncontainer">
-          <button class="detail__button" onclick="console.log('Banana')">
-            Buy Now
-          </button>
-        </div>
+      </div>
+      <div class="buy__buttoncontainer">
+        <button class="buy__button" onclick="console.log('Banana')">
+          Buy Now
+        </button>
       </div>
     </div>
     <script src="script/cookieHandler.js"></script>
     <script src="script/fetcher.js"></script>
-    <script src="script/setDetailPage.js"></script>
+    <script src="script/setBuyPage.js"></script>
   </body>
 </html>
