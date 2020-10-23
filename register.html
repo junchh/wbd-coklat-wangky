@@ -15,7 +15,10 @@
           <h1>Willy Wangky Choco Factory</h1>
           <div>Register.</div>
         </div>
-        <form class="register-box__form my-2" onsubmit="postRegisterForm(event)">
+        <form
+          class="register-box__form my-2"
+          onsubmit="postRegisterForm(event)"
+        >
           <input
             class="register-box__form__input my-2 p-2"
             type="text"
@@ -56,9 +59,9 @@
         </div>
       </div>
     </div>
-    <script src="script/cookieHandler.js"></script>
-    <script src="script/fetcher.js"></script>
-    <script src="script/verifyPassword.js"></script>
-    <script src="script/postRegisterForm.js"></script>
+    <script src="script/auth/cookieHandler.js"></script>
+    <script src="script/helpers/fetcher.js"></script>
+    <script src="script/page/register/verifyPassword.js"></script>
+    <script src="script/page/login/postRegisterForm.js"></script>
   </body>
 </html>
