@@ -2,6 +2,16 @@
 
 require_once '../config.php';
 
+// Check if user is logged in
+$user_id = isLoggedin($con);
+
+// If user is not logged in, unauthorize
+if($user_id == -1){
+    $result = ["status" => "invalid_login", "description" => "Invalid login information!"];
+    http_response_code(401);
+    exit(json_encode($result));   
+}
+
 $name = $_POST["name"];
 $price = $_POST["price"];
 $description = $_POST["description"];
