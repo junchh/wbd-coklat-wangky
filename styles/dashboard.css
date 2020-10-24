@@ -23,20 +23,22 @@
 }
 
 .dashboard__item {
-  flex: 0 0 400px;
   display: flex;
   flex-direction: column;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   border-radius: 0.75rem;
   overflow: hidden;
   margin: 1rem;
-  /* width: ; */
+}
+
+.dashboard__link {
+  width: min(300px, 100%);
 }
 
 .dashboard__item > img {
   object-fit: cover;
-  max-height: 250px;
-  width: 400px;
+  max-height: 150px;
+  /* width: max(400px, 100%); */
   flex: 1;
 }
 

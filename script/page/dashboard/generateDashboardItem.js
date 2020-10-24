@@ -6,7 +6,7 @@ const generateDashboardItem = (chocolateArray) => {
   let items = "";
   for (let i = 0; i < chocolateArray.length; i++) {
     items += `
-    <a href="/detail.html?id=${chocolateArray[i].id}">
+    <a href="/detail.html?id=${chocolateArray[i].id}" class="dashboard__link">
       <div class="dashboard__item">
         <img src="${chocolateArray[i].imagePath}" />
         <div class="dashboard__item__description">

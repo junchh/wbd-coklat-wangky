@@ -10,32 +10,7 @@
     <title>Dashboard</title>
   </head>
   <body>
-    <nav class="navigation">
-      <div class="navigation__linkcontainer">
-        <a class="navigation__link" href="#" onclick="console.log('Home')">
-          <span class="navigation__linkhover">
-            Home
-          </span>
-        </a>
-        <a class="navigation__link" href="/history.html" onclick="console.log('History')">
-          <span class="navigation__linkhover">
-            History
-          </span>
-        </a>
-      </div>
-      <div class="navigation__searchcontainer">
-        <form method="GET" action="search.html" class="navigation__searchcontainer__form">
-          <input class="navigation__search" type="text" name="q" value="" placeholder="Search" />
-        </form>
-      </div>
-      <div class="navigation__logoutcontainer">
-        <a class="navigation__link" href="#" onclick="logout()">
-          <span class="navigation__linkhover">
-            Logout
-          </span>
-        </a>
-      </div>
-    </nav>
+    <div id="navigation-container"></div>
     <div class="dashboard container-fluid p-6">
       <div class="dashboard__lore">
         <h2>Hello, <span id="username"></span>!</h2>
@@ -47,6 +22,7 @@
       <div class="dashboard__itemcontainer" id="dashboard__itemcontainer"></div>
       </div>
     </div>
+    <script src="script/common/navbar.js"></script>
     <script src="script/auth/cookieHandler.js"></script>
     <script src="script/auth/logout.js"></script>
     <script src="script/helpers/fetcher.js"></script>

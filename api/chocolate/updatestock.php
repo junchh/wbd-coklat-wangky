@@ -5,7 +5,7 @@ require_once '../config.php';
 // Check if user is logged in
 $user_id = isLoggedin($con);
 
-// If user is not logged in, unauthorize
+// If user is not logged in and not admin, unauthorize
 if($user_id == -1 && !isAdmin($con, $user_id)){
     $result = ["status" => "invalid_login", "description" => "Invalid login information!"];
     http_response_code(401);

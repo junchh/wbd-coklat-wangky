@@ -11,37 +11,22 @@
     <title>Search kuy</title>
   </head>
   <body onload="checkCookie()">
-    <nav class="navigation">
-      <div class="navigation__linkcontainer">
-        <a class="navigation__link" href="#" onclick="console.log('Home')"">Home</a>
-        <a class="navigation__link" href="#" onclick="console.log('History')"">History</a>
-      </div>
-      <div class="navigation__searchcontainer">
-        <form method="GET" action="search.html" class="navigation__searchcontainer__form">
-          <input id="search-query" class="navigation__search" type="text" name="q" value="" placeholder="Search" />
-        </form>
-      </div>
-      <div class="navigation__logoutcontainer">
-        <a class="navigation__link" href="#" onclick="logout()">Logout</a>
-      </div>
-    </nav>
+    <div id="navigation-container"></div>
     <div class="dashboard container-fluid p-6">
       <div class="dashboard__lore">
         <h2 id="motd">Hello, Wangky!</h2>
       </div>
-      <div id="search-result-container" class="search-result">
-        
-        
-      </div>
+      <div id="search-result-container" class="search-result"></div>
       <div class="search-pagination">
         <ul id="search-nav" class="search-nav">
-            <li class="pagination-item active">1</li>
-            <li class="pagination-item">2</li>
-            <li class="pagination-item">3</li>
-            <li class="pagination-item">4</li>
+          <li class="pagination-item active">1</li>
+          <li class="pagination-item">2</li>
+          <li class="pagination-item">3</li>
+          <li class="pagination-item">4</li>
         </ul>
       </div>
     </div>
+    <script src="script/common/navbar.js"></script>
     <script src="script/auth/cookieHandler.js"></script>
     <script src="script/auth/logout.js"></script>
     <script src="script/helpers/fetcher.js"></script>
