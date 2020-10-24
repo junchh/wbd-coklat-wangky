@@ -1,10 +1,6 @@
 <?php 
 
-<<<<<<< HEAD
 require_once '../config.php';
-=======
-require_once('../config.php');
->>>>>>> 85509f374c9ee10dbbb2c2de5ad6c9f2fc7b5183
 
 // Check if id is set on query string
 if(isset($_GET['id'])) {
