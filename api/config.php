@@ -55,6 +55,21 @@ function isLoggedin($con) {
 
 }
 
+function isAdmin($con, $user_id){
+    $user_id = isLoggedin($con);
+    if($user_id == -1){
+        return false;
+    }
+    $query = $con->query("SELECT `superuser` FROM `users` WHERE `id`='" . $user_id . "'");
+    $row = $query->fetch_assoc();
+
+    if(!$row){
+        return false;
+    }
+
+    return $row["superuser"] == 1;
+}
+
 // Convert snake_case to camelCase
 function changeToCamel($string) {
     $res = "";

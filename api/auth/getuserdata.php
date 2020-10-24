@@ -13,7 +13,10 @@ if($user_id == -1){
 }
 
 // Get user data from DB
-$query = $con->query("SELECT * FROM `users` WHERE `id` = '" . $user_id . "'");
+$query = $con->query(
+    "SELECT `id`, `username`, `name`, `email`, `superuser`
+    FROM `users` WHERE `id` = '" . $user_id . "'"
+);
 
 // Return user data in payload
 $payload = $query->fetch_assoc();
