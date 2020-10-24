@@ -1,6 +1,6 @@
 <?php 
 
-require_once('/../config.php');
+require_once('../config.php');
 
 // Check if id is set on query string
 if(isset($_GET['id'])) {
