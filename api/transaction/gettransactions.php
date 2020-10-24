@@ -1,6 +1,6 @@
 <?php 
 
-require_once 'config.php';
+require_once '../config.php';
 
 $user_id = isLoggedin($con);
 if($user_id == -1){
