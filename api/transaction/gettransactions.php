@@ -8,7 +8,11 @@ if($user_id == -1){
     exit(json_encode($result));   
 }
 
-$query = $con->query("SELECT * FROM `transactions` WHERE `buyer_id`='" . $user_id . "' ORDER BY `date` DESC");
+$query = $con->query(
+    "SELECT `name`, `amount`, `price`, `date`, `address`
+    FROM `transactions` JOIN `chocolates` ON `transactions`.`chocolate_id` = `chocolates`.`id`
+    WHERE `buyer_id`='" . $user_id . "' ORDER BY `date` DESC"
+);
 
 $payload = [];
 while($row = $query->fetch_assoc()) {
