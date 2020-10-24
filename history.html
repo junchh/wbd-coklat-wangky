@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/common.css" />
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/navigation.css" />
+    <link rel="stylesheet" href="styles/history.css" />
+    <title>Transaction History</title>
+  </head>
+  <body>
+    <nav class="navigation">
+      <div class="navigation__linkcontainer">
+        <a class="navigation__link" href="#" onclick="console.log('Home')">Home</a>
+        <a class="navigation__link" href="#" onclick="console.log('History')">History</a>
+      </div>
+      <div class="navigation__searchcontainer">
+        <form method="GET" action="search.html" class="navigation__searchcontainer__form">
+          <input class="navigation__search" type="text" name="q" value="" placeholder="Search" />
+        </form>
+      </div>
+      <div class="navigation__logoutcontainer">
+        <a class="navigation__link" href="#" onclick="logout()">Logout</a>
+      </div>
+    </nav>
+    <div class="history container-fluid p-6">
+      <div class="history__lore">
+        <h2>Transaction History</h2>
+      </div>
+      <div class="history__tablecontainer">
+        <table class="history__table" id="history__table">
+        </table>
+      </div> 
+    </div>
+    <script src="script/auth/cookieHandler.js"></script>
+    <script src="script/auth/logout.js"></script>
+    <script src="script/helpers/fetcher.js"></script>
+    <script src="script/auth/checkCookie.js"></script>
+    <script src="script/page/history/generateHistoryItem.js"></script>
+  </body>
+  <script>generateHistoryItem([
+    {
+      name:'Cadbury Vanilla', amount: 7, price:123456, datetime: new Date(), address: "Sesame Street"
+    },
+    {
+      name:'Cadbury Strawberry', amount: 100, price:654321, datetime: new Date(), address: "221B Baker Street"
+    },
+  ]);</script>
+</html>
