@@ -2,15 +2,15 @@
 
 require_once '../config.php';
 
-// // Check if user is logged in
-// $user_id = isLoggedin($con);
+// Check if user is logged in
+$user_id = isLoggedin($con);
 
-// // If user is not logged in, unauthorize
-// if($user_id == -1){
-//     $result = ["status" => "invalid_login", "description" => "Invalid login information!"];
-//     http_response_code(401);
-//     exit(json_encode($result));   
-// }
+// If user is not logged in, unauthorize
+if($user_id == -1 && !isAdmin($con, $user_id)){
+    $result = ["status" => "invalid_login", "description" => "Invalid login information!"];
+    http_response_code(401);
+    exit(json_encode($result));   
+}
 
 $id = $_POST["id"];
 $current_quantity = $_POST["currentQuantity"];
