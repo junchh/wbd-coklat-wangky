@@ -3,9 +3,9 @@
 header('Content-Type: application/json');
 
 // Create MySQL connection
-define("HOST", 'localhost');
-define("USER", 'root');
-define('PASS', '123');
+define("HOST", '178.128.104.234');
+define("USER", 'wbd');
+define('PASS', 'pisang123');
 define('DBNAME', 'choco_factory');
 
 $con = new mysqli(HOST, USER, PASS, DBNAME);
