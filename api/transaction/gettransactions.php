@@ -8,6 +8,11 @@ if($user_id == -1){
     exit(json_encode($result));   
 }
 
+if(isAdmin($con, $user_id)){
+    $result = ["status" => "unauthorized", "description" => "Admins cannot access transactions information!"];
+    exit(json_encode($result));  
+}
+
 $query = $con->query(
     "SELECT `name`, `amount`, `price`, `date`, `address`
     FROM `transactions` JOIN `chocolates` ON `transactions`.`chocolate_id` = `chocolates`.`id`
