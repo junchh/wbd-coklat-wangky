@@ -42,6 +42,7 @@
 }
 
 .detail__content__info__description {
+  white-space: pre-line;
 }
 
 .detail__content__info__text > span {

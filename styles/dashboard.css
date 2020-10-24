@@ -35,7 +35,7 @@
 
 .dashboard__item > img {
   object-fit: cover;
-  height: 250px;
+  max-height: 250px;
   width: 400px;
   flex: 1;
 }
