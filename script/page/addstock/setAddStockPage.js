@@ -1,6 +1,5 @@
-let price = 0;
-let buyAmount = 1;
-let maxBuyAmount = 0;
+let addAmount = 0;
+let amountAvailable = 0;
 
 const setBuyPage = (chocoId) => {
   getAPI(`/api/chocolate/getchocolate.php?id=${chocoId}`, (data) => {
@@ -20,12 +19,7 @@ const setBuyPage = (chocoId) => {
         chocolate.currentQuantity;
       document.getElementById("chocolate-description").innerHTML =
         chocolate.description;
-      price = chocolate.price;
-      maxBuyAmount = chocolate.currentQuantity;
-      document.getElementById("buyAmount").innerHTML = buyAmount;
-      document.getElementById("totalPrice").innerHTML = parseInt(
-        buyAmount * price
-      ).toLocaleString("id-ID");;
+      amountAvailable = chocolate.currentQuantity;
     } else {
       document.getElementById("detail-container").innerHTML =
         "Invalid chocolate gan";
@@ -35,18 +29,3 @@ const setBuyPage = (chocoId) => {
 
 checkCookie();
 setBuyPage(new URLSearchParams(window.location.search).get("id"));
-
-setInterval(() => {
-  getAPI(`/api/chocolate/getchocolate.php?id=${new URLSearchParams(window.location.search).get("id")}`, (data) => {
-    const jsonData = JSON.parse(data);
-
-    if (jsonData.status === "success") {
-      const chocolate = jsonData.payload;
-      document.getElementById("chocolate-quantity-sold").innerHTML =
-        chocolate.quantitySold;
-      document.getElementById("chocolate-current-quantity").innerHTML =
-        chocolate.currentQuantity;
-      maxBuyAmount = chocolate.currentQuantity;
-    }
-  });
-}, 1000)

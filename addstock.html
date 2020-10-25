@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Stock</title>
+    <link rel="stylesheet" href="styles/common.css" />
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/navigation.css" />
+    <link rel="stylesheet" href="styles/addstock.css" />
+  </head>
+  <body>
+    <div id="navigation-container"></div>
+    <div class="container-fluid p-6">
+      <div class="addstock" id="addstock-container">
+        <div class="addstock__header">
+          <h1 id="chocolate-name"></h1>
+        </div>
+        <div class="addstock__content">
+          <div class="addstock__content__imagecontainer">
+            <img src="./" id="chocolate-image" />
+          </div>
+          <div class="addstock__content__info">
+            <div class="addstock__content__info__text">
+              Amount sold: <span id="chocolate-quantity-sold"></span>
+            </div>
+            <div class="addstock__content__info__text">
+              Price: Rp <span id="chocolate-price"></span>
+            </div>
+            <div class="addstock__content__info__text">
+              Amount available: <span id="chocolate-current-quantity"></span>
+            </div>
+            <div class="addstock__content__info__text">Description</div>
+            <div
+              class="addstock__content__info__description"
+              id="chocolate-description"
+            ></div>
+            <div class="addstock__content__info__actioncontainer">
+              <div class="addstock__content__info__actioncolumn">
+                <div class="addstock__content__info__actiontitle">
+                  Amount to Add:
+                </div>
+                <div class="addstock__content__info__actiondetailcontainer">
+                  <button class="addstock__content__info__actionbutton" onclick="decStockAmount()">
+                    -
+                  </button>
+                  <div class="addstock__content__info__actionnumber">
+                    <span id="addStockAmount">1</span>
+                  </div>
+                  <button class="addstock__content__info__actionbutton" onclick="addStockAmount()">
+                    +
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="addstock__buttoncontainer">
+        <button class="addstock__button" onclick="doAddStock()">
+          Add
+        </button>
+        <button class="addstock__button" onclick="console.log('Banana')">
+          Cancel
+        </button>
+      </div>
+    </div>
+    <script src="script/auth/cookieHandler.js"></script>
+    <script src="script/helpers/fetcher.js"></script>
+    <script src="script/common/navbar.js"></script>
+    <script src="script/auth/logout.js"></script>
+    <script src="script/auth/checkCookie.js"></script>
+    <script src="script/page/addstock/setAddStockPage.js"></script>
+    <script src="script/page/addstock/addStockPageControl.js"></script>
+  </body>
+</html>
