@@ -62,9 +62,58 @@
   width: 300px;
   max-width: 300px;
   cursor: pointer;
+  margin-right: 1rem;
 }
 
 #chocolate-description {
+  border-radius: 0.25rem;
+  border: 0.75px solid black;
+  padding: 0.5rem;
+}
+
+.buy__content__info__actioncontainer {
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  justify-content: space-between;
+  /* background-color: red; */
+}
+
+.buy__content__info__actiontitle {
+  font-size: 1.2rem;
+  /* background-color: blue; */
+}
+
+.buy__content__info__actiondetailcontainer {
+  border-radius: 0.25rem;
+  border: 0.75px solid black;
+  padding: 0.5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.buy__content__info__actionbutton {
+  border-radius: 999rem;
+  font-size: 1rem;
+  border: 0.75px solid black;
+  padding: 0 0.4rem 0 0.4rem;
+  background-color: white;
+  outline: none;
+}
+
+.buy__content__info__actionnumber {
+  font-size: 1rem;
+}
+
+.buy__content__info__actionbutton:hover {
+  background-color: pink;
+}
+
+.buy__content__info__address {
   border-radius: 0.25rem;
   border: 0.75px solid black;
   padding: 0.5rem;

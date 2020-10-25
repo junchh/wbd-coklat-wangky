@@ -1,3 +1,7 @@
+let price = 0;
+let buyAmount = 0;
+let maxBuyAmount = 0;
+
 const setBuyPage = (chocoId) => {
   getAPI(`/api/chocolate/getchocolate.php?id=${chocoId}`, (data) => {
     const jsonData = JSON.parse(data);
@@ -16,6 +20,8 @@ const setBuyPage = (chocoId) => {
         chocolate.currentQuantity;
       document.getElementById("chocolate-description").innerHTML =
         chocolate.description;
+      price = chocolate.price;
+      maxBuyAmount = chocolate.currentQuantity;
     } else {
       document.getElementById("detail-container").innerHTML =
         "Invalid chocolate gan";
