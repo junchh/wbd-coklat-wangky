@@ -1,4 +1,6 @@
-const createNavbar = () => {
+const createNavbar = (isAdmin) => {
+  const query2 = new URL(window.location.href).searchParams;
+
   return `
   <nav class="navigation">
     <div class="navigation__linkcontainer">
@@ -7,15 +9,19 @@ const createNavbar = () => {
           Home
         </span>
       </a>
-      <a class="navigation__link" href="/history.html" onclick="console.log('History')">
+      <a class="navigation__link" href="${
+        isAdmin ? "/createchocolate.html" : "/history.html"
+      }" onclick="console.log('History')">
         <span class="navigation__linkhover">
-          History
+          ${isAdmin ? "Add New Chocolate" : "History"}
         </span>
       </a>
     </div>
     <div class="navigation__searchcontainer">
       <form method="GET" action="search.html" class="navigation__searchcontainer__form">
-        <input class="navigation__search" type="text" name="q" value="" placeholder="Search" />
+        <input class="navigation__search" type="text" name="q" value="${
+          query2.get("q") || ""
+        }" placeholder="Search" />
       </form>
     </div>
     <div class="navigation__logoutcontainer">
@@ -29,4 +35,9 @@ const createNavbar = () => {
   `;
 };
 
-document.getElementById("navigation-container").innerHTML = createNavbar();
+getAPI("/api/verifyadmin.php", (data) => {
+  const result = JSON.parse(data);
+  document.getElementById("navigation-container").innerHTML = createNavbar(
+    result["status"] === "success"
+  );
+});

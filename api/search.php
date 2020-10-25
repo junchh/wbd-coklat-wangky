@@ -3,7 +3,7 @@
 require_once 'config.php';
 
 if(isset($_GET['q'])){
-    $user_id = isLoggedin($con)[0];
+    $user_id = isLoggedin($con);
     if($user_id == -1){
         $result = ["status" => "invalid_login", "description" => "Invalid login information!"];
         exit(json_encode($result));   

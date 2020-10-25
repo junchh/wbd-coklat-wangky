@@ -35,3 +35,18 @@ const setBuyPage = (chocoId) => {
 
 checkCookie();
 setBuyPage(new URLSearchParams(window.location.search).get("id"));
+
+setInterval(() => {
+  getAPI(`/api/chocolate/getchocolate.php?id=${new URLSearchParams(window.location.search).get("id")}`, (data) => {
+    const jsonData = JSON.parse(data);
+
+    if (jsonData.status === "success") {
+      const chocolate = jsonData.payload;
+      document.getElementById("chocolate-quantity-sold").innerHTML =
+        chocolate.quantitySold;
+      document.getElementById("chocolate-current-quantity").innerHTML =
+        chocolate.currentQuantity;
+      maxBuyAmount = chocolate.currentQuantity;
+    }
+  });
+}, 1000)

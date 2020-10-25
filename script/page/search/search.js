@@ -45,6 +45,7 @@ const displaySearch = (page) => {
 const callback = (response) => {
     const resObj = JSON.parse(response)
     if(resObj.status == "success") {
+        items = []
         const searchResult = resObj.payload 
 
         let len = searchResult.length 
@@ -88,7 +89,7 @@ const callback = (response) => {
             }
         }
         document.getElementById("search-nav").innerHTML = str
-
+        document.getElementById("search-result-container").innerHTML = ""
         if(len != 0) {
             if(query.get("page")) {
                 currentPage = parseInt(query.get("page"))
@@ -114,17 +115,14 @@ const callback = (response) => {
 
 }
 
+getAPI("/api/search.php?q=" + query.get('q'), callback)
 
-searchBox = document.getElementById("search-query")
-searchBox.value = query.get('q')
+document.getElementById("navigation-container").addEventListener('input', (e) => {
 
-getAPI("/api/search.php?q=" + searchBox.value, callback)
-
-searchBox.addEventListener('input', () => {
-    query.set('q', searchBox.value)
+    query.set('q', e.target.value)
     window.history.replaceState(null, '', origin + path + '?q=' + query.get('q'))
     
-    getAPI("/api/search.php?q=" + searchBox.value, callback)
+    getAPI("/api/search.php?q=" + e.target.value, callback)
 
     currentPage = 1
 

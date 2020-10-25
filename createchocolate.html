@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/common.css" />
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/navigation.css" />
+    <link rel="stylesheet" href="styles/createchocolate.css" />
+    <title>Create Chocolate</title>
+  </head>
+  <body>
+    <div id="navigation-container"></div>
+    <div class="dashboard container-fluid p-6">
+      <div class="createchoco" id="createchoco-container">
+        <div class="createchoco__header">
+          <h1>Add New Chocolate</h1>
+        </div>
+        <div class="createchoco__content">
+          <form
+            method="POST"
+            onsubmit="createChocolate(event)"
+            enctype="multipart/form-data"
+          >
+            <div class="createchoco__field">
+              <label for="choco-name">Name</label>
+              <input
+                required
+                id="choco-name"
+                type="text"
+                name="name"
+                value=""
+              />
+            </div>
+            <div class="createchoco__field">
+              <label for="choco-price">Price</label>
+              <input
+                required
+                id="choco-price"
+                type="text"
+                name="price"
+                value=""
+              />
+            </div>
+            <div class="createchoco__field">
+              <label for="choco-desc">Description</label>
+              <textarea id="choco-desc" name="description"></textarea>
+            </div>
+            <div class="createchoco__field">
+              <label for="choco-image">Image</label>
+              <input required id="choco-image" type="file" name="image" />
+            </div>
+            <div class="createchoco__field">
+              <label for="choco-amount">Amount</label>
+              <input
+                required
+                id="choco-amount"
+                type="text"
+                name="currentQuantity"
+              />
+            </div>
+            <div class="createchoco__buttoncontainer">
+              <button class="createchoco__button" type="submit">
+                Add New Chocolate
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="script/auth/cookieHandler.js"></script>
+    <script src="script/auth/logout.js"></script>
+    <script src="script/helpers/fetcher.js"></script>
+    <script src="script/auth/checkCookie.js"></script>
+    <script src="script/common/navbar.js"></script>
+    <script src="script/page/createchocolate/createChocolate.js"></script>
+  </body>
+</html>

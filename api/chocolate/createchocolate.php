@@ -6,8 +6,16 @@ require_once '../config.php';
 $user_id = isLoggedin($con);
 
 // If user is not logged in and not admin, unauthorize
-if($user_id == -1 && !isAdmin($con, $user_id)){
+if($user_id == -1){
     $result = ["status" => "invalid_login", "description" => "Invalid login information!"];
+    http_response_code(401);
+    exit(json_encode($result));   
+}
+
+$is_admin = isAdmin($con, $user_id);
+
+if(!$is_admin){
+    $result = ["status" => "invalid_previlege", "description" => "Invalid previlege!"];
     http_response_code(401);
     exit(json_encode($result));   
 }
