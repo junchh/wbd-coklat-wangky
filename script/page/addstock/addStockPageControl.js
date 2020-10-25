@@ -9,7 +9,7 @@ const decStockAmount = () => {
 }
 
 const addCallback = (data) => {
-    console.log(data)
+    console.log(data);
 }
 
 const doAddStock = () => {
@@ -17,9 +17,9 @@ const doAddStock = () => {
     
     if(addAmount > 0){
         const formData = new FormData();
-        formData.append('chocolate_id', id);
-        formData.append('amount', addAmount);
-        // postAPI("/api/transaction/dummy.php", addCallback, formData);
+        formData.append('id', id);
+        formData.append('currentQuantity', addAmount + amountAvailable);
+        postAPI("/api/chocolate/updatestock.php", addCallback, formData);
     }
     
 }
