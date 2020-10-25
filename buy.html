@@ -39,19 +39,59 @@
               eum saepe voluptate eaque aliquid sint accusamus porro aut, ex
               animi cum ad, vero esse labore placeat ullam consectetur in velit!
             </div>
+            <div class="buy__content__info__actioncontainer">
+              <div class="buy__content__info__actioncolumn">
+                <div class="buy__content__info__actiontitle">
+                  Amount to Buy:
+                </div>
+                <div class="buy__content__info__actiondetailcontainer">
+                  <button class="buy__content__info__actionbutton" onclick="decBuyAmount()">
+                    -
+                  </button>
+                  <div class="buy__content__info__actionnumber">
+                    <span id="buyAmount">0</span>
+                  </div>
+                  <button class="buy__content__info__actionbutton" onclick="addBuyAmount()">
+                    +
+                  </button>
+                </div>
+              </div>
+              <div class="buy__content__info__actioncolumn">
+                <div class="buy__content__info__actiontitle">
+                  Total Price:
+                </div>
+                <div class="buy__content__info__actiondetailcontainer">
+                  Rp <span id="totalPrice">0</span>
+                </div>
+              </div>
+            </div>
+            <div class="buy__content__info__text">
+              Address:
+            </div>
+            <textarea
+              class="buy__content__info__address"
+              id="buyAddress"
+              rows="3"
+              cols="50"
+              placeholder="Address"></textarea>
           </div>
         </div>
       </div>
       <div class="buy__buttoncontainer">
+        <button class="buy__button" onclick="doBuy()">
+          Buy
+        </button>
         <button class="buy__button" onclick="console.log('Banana')">
-          Buy Now
+          Cancel
         </button>
       </div>
     </div>
     <script src="script/auth/cookieHandler.js"></script>
+    <script src="script/auth/logout.js"></script>
     <script src="script/helpers/fetcher.js"></script>
     <script src="script/auth/checkCookie.js"></script>
     <script src="script/common/navbar.js"></script>
     <script src="script/page/buy/setBuyPage.js"></script>
+    <script src="script/page/buy/buyPageControl.js"></script>
   </body>
 </html>

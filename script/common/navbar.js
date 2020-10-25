@@ -1,4 +1,6 @@
 const createNavbar = (isAdmin) => {
+  const query2 = new URL(window.location.href).searchParams;
+
   return `
   <nav class="navigation">
     <div class="navigation__linkcontainer">
@@ -17,7 +19,9 @@ const createNavbar = (isAdmin) => {
     </div>
     <div class="navigation__searchcontainer">
       <form method="GET" action="search.html" class="navigation__searchcontainer__form">
-        <input class="navigation__search" type="text" name="q" value="" placeholder="Search" />
+        <input class="navigation__search" type="text" name="q" value="${
+          query2.get("q") || ""
+        }" placeholder="Search" />
       </form>
     </div>
     <div class="navigation__logoutcontainer">
