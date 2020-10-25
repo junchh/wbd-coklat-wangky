@@ -1,8 +1,6 @@
 const setDetailPage = (chocoId) => {
   getAPI(`/api/chocolate/getchocolate.php?id=${chocoId}`, (data) => {
-    console.log(data);
     const jsonData = JSON.parse(data);
-    console.log(jsonData);
 
     if (jsonData.status === "success") {
       const chocolate = jsonData.payload;
@@ -19,7 +17,20 @@ const setDetailPage = (chocoId) => {
         chocolate.description;
     } else {
       document.getElementById("detail-container").innerHTML =
-        "Invalid chocolate gan";
+        "Invalid chocolate id, please return to homepage.";
+    }
+  });
+  getAPI(`/api/verifyadmin.php`, (data) => {
+    const jsonData = JSON.parse(data);
+
+    if (jsonData.status === "success") {
+      document.getElementById(
+        "buy-button"
+      ).href = `/addstock.html?id=${chocoId}`;
+      document.getElementById("buy-button").innerHTML = "Add Stock";
+    } else {
+      document.getElementById("buy-button").href = `/buy.html?id=${chocoId}`;
+      document.getElementById("buy-button").innerHTML = "Buy";
     }
   });
 };
