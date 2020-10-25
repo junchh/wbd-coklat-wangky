@@ -99,10 +99,12 @@
 .addstock__content__info__actionbutton {
   border-radius: 999rem;
   font-size: 1rem;
-  border: 0.75px solid black;
+  border: 0.75px solid #ddd;
   padding: 0 0.4rem 0 0.4rem;
   background-color: white;
   outline: none;
+  transition: all;
+  transition-duration: 150ms;
 }
 
 .addstock__content__info__actionnumber {
@@ -110,5 +112,11 @@
 }
 
 .addstock__content__info__actionbutton:hover {
-  background-color: pink;
+  background-color: lightseagreen;
+  color: #fff;
+}
+
+.addstock__content__info__actionbutton:hover {
+  background-color: lightseagreen;
+  color: #fff;
 }

@@ -10,6 +10,8 @@ const decStockAmount = () => {
 
 const addCallback = (data) => {
     console.log(data);
+    alert("Stock addition successful!");
+    window.location = "/";
 }
 
 const doAddStock = () => {
