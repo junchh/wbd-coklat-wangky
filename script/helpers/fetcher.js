@@ -41,6 +41,7 @@ const postAPI = (endpoint, callback, data) => {
   // Check for session id in cookie
   const sessionId = getCookie("session_id");
   if (sessionId) {
+    console.log("sss");
     xhr.setRequestHeader("sessiontoken", sessionId);
   }
 

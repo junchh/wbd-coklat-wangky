@@ -15,8 +15,50 @@
   flex-direction: row;
 }
 
+.createchoco__content > form {
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.createchoco__field {
+  display: flex;
+  width: 100%;
+  padding: 0.25rem;
+}
+
+.createchoco__field > label {
+  width: 25%;
+  font-size: 1.2rem;
+}
+
+.createchoco__field > input[type="text"] {
+  flex: 1;
+  appearance: none;
+  border: 0.75px solid #ddd;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+}
+
+.createchoco__field > input[type="file"] {
+  flex: 1;
+  appearance: none;
+  padding: 0.5rem;
+}
+
+.createchoco__field > textarea {
+  flex: 1;
+  appearance: none;
+  border: 0.75px solid #ddd;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+}
+
+.createchoco__field > input[type="text"]:focus,
+textarea:focus {
+  outline: none;
+  border: 1.25px solid lightblue;
+}
 .createchoco__content__imagecontainer {
-  /* flex: 1; */
   display: flex;
   justify-content: center;
   align-items: center;

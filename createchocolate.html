@@ -17,24 +17,54 @@
           <h1>Add New Chocolate</h1>
         </div>
         <div class="createchoco__content">
-          <form method="POST" onsubmit="createChocolate(event)" enctype=multipart/form-data>
-            <label>Name</label>
-            <input type="text" name="name" value="" />
-            <label>Price</label>
-            <input type="text" name="price" value="" />
-            <label>Description</label>
-            <textarea name="description"></textarea>
-            <label>Image</label>
-            <input type="file" name="image" />
-            <label>Amount</label>
-            <input type="text" name="currentQuantity" />
-            <button type="submit">Add Chocolate</button>
+          <form
+            method="POST"
+            onsubmit="createChocolate(event)"
+            enctype="multipart/form-data"
+          >
+            <div class="createchoco__field">
+              <label for="choco-name">Name</label>
+              <input
+                required
+                id="choco-name"
+                type="text"
+                name="name"
+                value=""
+              />
+            </div>
+            <div class="createchoco__field">
+              <label for="choco-price">Price</label>
+              <input
+                required
+                id="choco-price"
+                type="text"
+                name="price"
+                value=""
+              />
+            </div>
+            <div class="createchoco__field">
+              <label for="choco-desc">Description</label>
+              <textarea id="choco-desc" name="description"></textarea>
+            </div>
+            <div class="createchoco__field">
+              <label for="choco-image">Image</label>
+              <input required id="choco-image" type="file" name="image" />
+            </div>
+            <div class="createchoco__field">
+              <label for="choco-amount">Amount</label>
+              <input
+                required
+                id="choco-amount"
+                type="text"
+                name="currentQuantity"
+              />
+            </div>
+            <div class="createchoco__buttoncontainer">
+              <button class="createchoco__button" type="submit">
+                Add New Chocolate
+              </button>
+            </div>
           </form>
-        </div>
-        <div class="createchoco__buttoncontainer">
-          <button class="createchoco__button" onclick="console.log('Banana')">
-            Buy Now
-          </button>
         </div>
       </div>
     </div>
