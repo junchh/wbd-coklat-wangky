@@ -2,9 +2,17 @@
  * Generate dashboard item for dashboard page
  * @param {Array.<{id:number, name:string, price:number, imagePath:string, quantitySold: number, currentQuantity:number}>} chocolateArray Array of listed chocolates
  */
-const generateDashboardItem = (chocolateArray) => {
+const generateDashboardItem = (chocolateArray, limit, all) => {
   let items = "";
-  for (let i = 0; i < chocolateArray.length; i++) {
+
+  let count = chocolateArray.length < limit ? chocolateArray.length : limit;
+  if (all) {
+    console.log("hehe");
+    count = chocolateArray.length;
+  }
+
+  console.log(count);
+  for (let i = 0; i < count; i++) {
     items += `
     <a href="/detail.html?id=${chocolateArray[i].id}" class="dashboard__link">
       <div class="dashboard__item">

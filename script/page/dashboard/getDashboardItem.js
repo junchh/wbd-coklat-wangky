@@ -1,7 +1,8 @@
-const callback = (data) => {
-  const jsonData = JSON.parse(data);
-  generateDashboardItem(jsonData.payload);
+const getDashboardItem = (limit, all) => {
+  getAPI("/api/chocolate/getchocolates.php", (data) => {
+    const jsonData = JSON.parse(data);
+    generateDashboardItem(jsonData.payload, limit, all);
+  });
 };
 
-checkCookie();
-getAPI("/api/chocolate/getchocolates.php", callback);
+getDashboardItem(10, false);

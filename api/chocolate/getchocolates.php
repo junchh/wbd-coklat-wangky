@@ -13,7 +13,7 @@ if($user_id == -1){
 }
 
 // Get all chocolates from DB
-$query = $con->query("SELECT * FROM `chocolates`");
+$query = $con->query("SELECT * FROM `chocolates` ORDER BY `id` DESC");
 $payload = [];
 while($row = $query->fetch_assoc()) {
     array_push($payload, transformRow($row));
