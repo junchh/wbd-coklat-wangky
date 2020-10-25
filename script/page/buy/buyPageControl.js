@@ -11,7 +11,7 @@ const addBuyAmount = () => {
 }
 
 const decBuyAmount = () => {
-    buyAmount = Math.max(0, buyAmount-1);
+    buyAmount = Math.max(1, buyAmount-1);
     document.getElementById("buyAmount").innerHTML = buyAmount;
     updatePrice();
 }

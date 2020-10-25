@@ -1,0 +1,114 @@
+.addstock {
+}
+
+.addstock__header {
+  padding: 0.5rem;
+  padding-bottom: 1rem;
+}
+
+.addstock__header > h1 {
+  font-size: 2rem;
+}
+
+.addstock__content {
+  display: flex;
+  flex-direction: row;
+}
+
+.addstock__content__imagecontainer {
+  /* flex: 1; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.addstock__content__imagecontainer > img {
+  object-fit: cover;
+  width: 400px;
+  height: 400px;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.addstock__content__info {
+  flex: 1;
+  padding: 0.5rem;
+}
+
+.addstock__content__info__text {
+  padding-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.addstock__content__info__description {
+}
+
+.addstock__content__info__text > span {
+  font-size: 1.2rem;
+}
+
+.addstock__buttoncontainer {
+  display: flex;
+  justify-content: end;
+  padding: 0.5rem;
+}
+
+.addstock__button {
+  border: 0;
+  background-color: lightseagreen;
+  color: white;
+  padding: 0.5rem;
+  width: 300px;
+  max-width: 300px;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+
+#chocolate-description {
+  border-radius: 0.25rem;
+  border: 0.75px solid black;
+  padding: 0.5rem;
+}
+
+.addstock__content__info__actioncontainer {
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  justify-content: space-between;
+  /* background-color: red; */
+}
+
+.addstock__content__info__actiontitle {
+  font-size: 1.2rem;
+  /* background-color: blue; */
+}
+
+.addstock__content__info__actiondetailcontainer {
+  border-radius: 0.25rem;
+  border: 0.75px solid black;
+  padding: 0.5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.addstock__content__info__actionbutton {
+  border-radius: 999rem;
+  font-size: 1rem;
+  border: 0.75px solid black;
+  padding: 0 0.4rem 0 0.4rem;
+  background-color: white;
+  outline: none;
+}
+
+.addstock__content__info__actionnumber {
+  font-size: 1rem;
+}
+
+.addstock__content__info__actionbutton:hover {
+  background-color: pink;
+}
