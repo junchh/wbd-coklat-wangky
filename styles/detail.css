@@ -19,7 +19,6 @@
   /* flex: 1; */
   display: flex;
   justify-content: center;
-  align-items: center;
   padding: 0.5rem;
 }
 
@@ -65,10 +64,16 @@
   max-width: 300px;
   cursor: pointer;
   text-align: center;
+  transition: all;
+  transition-duration: 150ms;
+}
+
+.detail__button:hover {
+  background-color: teal;
 }
 
 #chocolate-description {
   border-radius: 0.25rem;
-  border: 0.75px solid black;
+  border: 0.75px solid #ddd;
   padding: 0.5rem;
 }

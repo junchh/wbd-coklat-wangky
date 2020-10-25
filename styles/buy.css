@@ -19,7 +19,7 @@
   /* flex: 1; */
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   padding: 0.5rem;
 }
 
@@ -42,6 +42,7 @@
 }
 
 .buy__content__info__description {
+  white-space: pre-line;
 }
 
 .buy__content__info__text > span {
@@ -64,11 +65,17 @@
   max-width: 300px;
   cursor: pointer;
   margin-right: 1rem;
+  transition: all;
+  transition-duration: 150ms;
+}
+
+.buy__button:hover {
+  background-color: teal;
 }
 
 #chocolate-description {
   border-radius: 0.25rem;
-  border: 0.75px solid black;
+  border: 0.75px solid #ddd;
   padding: 0.5rem;
 }
 
@@ -89,7 +96,7 @@
 
 .buy__content__info__actiondetailcontainer {
   border-radius: 0.25rem;
-  border: 0.75px solid black;
+  border: 0.75px solid #ddd;
   padding: 0.5rem;
   width: 100%;
   display: flex;
@@ -100,10 +107,12 @@
 .buy__content__info__actionbutton {
   border-radius: 999rem;
   font-size: 1rem;
-  border: 0.75px solid black;
+  border: 0.75px solid #ddd;
   padding: 0 0.4rem 0 0.4rem;
   background-color: white;
   outline: none;
+  transition: all;
+  transition-duration: 150ms;
 }
 
 .buy__content__info__actionnumber {
@@ -111,11 +120,13 @@
 }
 
 .buy__content__info__actionbutton:hover {
-  background-color: pink;
+  background-color: lightseagreen;
+  color: #fff;
 }
 
 .buy__content__info__address {
   border-radius: 0.25rem;
-  border: 0.75px solid black;
+  border: 0.75px solid #ddd;
   padding: 0.5rem;
+  width: 100%;
 }
