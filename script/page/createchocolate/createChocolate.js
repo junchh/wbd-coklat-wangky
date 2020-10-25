@@ -16,3 +16,5 @@ const createChocolate = (event) => {
   );
   return;
 };
+
+checkAdmin();
