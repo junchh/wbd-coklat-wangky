@@ -6,7 +6,7 @@ Aplikasi Web ini adalah aplikasi penjualan coklat sederhana yang memperbolehkan 
 
 ## Daftar requirement
 
-Berikut requirement dari aplikasi web yang dibuat
+Berikut daftar requirements dari aplikasi web yang dibuat:
 * Pengguna dapat melakukan pendaftaran akun.
 * Pengguna dapat login dengan akun yang telah didaftarkan.
 * Pengguna dapat logout dari akun yang telah login.
