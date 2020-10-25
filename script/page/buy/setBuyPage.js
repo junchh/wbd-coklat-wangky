@@ -33,7 +33,7 @@ const setBuyPage = (chocoId) => {
   });
 };
 
-checkCookie();
+checkLogin();
 setBuyPage(new URLSearchParams(window.location.search).get("id"));
 
 setInterval(() => {

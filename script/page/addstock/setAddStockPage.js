@@ -27,5 +27,5 @@ const setBuyPage = (chocoId) => {
   });
 };
 
-checkCookie();
+checkAdmin();
 setBuyPage(new URLSearchParams(window.location.search).get("id"));

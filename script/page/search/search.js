@@ -115,6 +115,8 @@ const callback = (response) => {
 
 }
 
+checkLogin();
+
 getAPI("/api/search.php?q=" + query.get('q'), callback)
 
 document.getElementById("navigation-container").addEventListener('input', (e) => {

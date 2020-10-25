@@ -3,6 +3,6 @@ const callback = (data) => {
     generateHistoryItem(jsonData.payload);
   };
   
-  checkCookie();
+  checkNotAdmin();
   getAPI("/api/transaction/gettransactions.php", callback);
   

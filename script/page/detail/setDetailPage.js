@@ -24,5 +24,5 @@ const setDetailPage = (chocoId) => {
   });
 };
 
-checkCookie();
+checkLogin();
 setDetailPage(new URLSearchParams(window.location.search).get("id"));
