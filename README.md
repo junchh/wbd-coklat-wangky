@@ -44,8 +44,6 @@ Berikut beberapa screenshot dari aplikasi.
 
 ## Pembagian Tugas
 
-Setiap anggota kelompok diwajibkan untuk mengerjakan bagian frontend dan backend.
-
 ### Frontend
 1. Login : 13518xxx, 13518xxx
 2. Register : 13518xxx
