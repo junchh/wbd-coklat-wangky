@@ -115,18 +115,18 @@ const callback = (response) => {
 }
 
 
-searchBox = document.getElementById("search-query")
-searchBox.value = query.get('q')
+// searchBox = document.getElementById("search-query")
+// searchBox.value = query.get('q')
 
-getAPI("/api/search.php?q=" + searchBox.value, callback)
+getAPI("/api/search.php?q=" + query.get('q'), callback)
 
-searchBox.addEventListener('input', () => {
-    query.set('q', searchBox.value)
-    window.history.replaceState(null, '', origin + path + '?q=' + query.get('q'))
+// searchBox.addEventListener('input', () => {
+//     query.set('q', searchBox.value)
+//     window.history.replaceState(null, '', origin + path + '?q=' + query.get('q'))
     
-    getAPI("/api/search.php?q=" + searchBox.value, callback)
+//     getAPI("/api/search.php?q=" + searchBox.value, callback)
 
-    currentPage = 1
+//     currentPage = 1
 
-})
+// })
 
